@@ -1,0 +1,47 @@
+:root{--primary:#1F6F8B;--accent:#4296B2;--on-primary:#fff;--bg:#E6ECF0;--surface:#fff;--text:#14212b;--muted:#44586a;--footer:#D9D9D9;--ok:#1d7a46;--bad:#b3261e;--r:14px}
+:root[data-theme="dark"]{--primary:#6BB8D4;--accent:#4296B2;--on-primary:#0b1720;--bg:#0f1a22;--surface:#1a2833;--text:#e8eef2;--muted:#a9bac6;--footer:#142029;--ok:#5fd08b;--bad:#ff8a80}
+*{box-sizing:border-box}
+body{margin:0;font:1.05rem/1.6 "Segoe UI",Verdana,sans-serif;background:var(--bg);color:var(--text);display:flex;flex-direction:column;min-height:100vh}
+a{color:var(--primary)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;color:#000;padding:8px;z-index:9}
+header{background:var(--primary);color:var(--on-primary)}
+.bar{max-width:60rem;margin:auto;padding:.7rem 1rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:700;letter-spacing:.04em;color:inherit;text-decoration:none;margin-right:auto}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{display:block;padding:.4rem .8rem;border-radius:99px;color:inherit;text-decoration:none}
+nav a:hover,nav a[aria-current]{background:rgba(255,255,255,.22);box-shadow:inset 0 -2px currentColor}
+.icon-btn{background:none;border:2px solid currentColor;color:inherit;border-radius:99px;padding:.3rem .8rem;font:inherit;cursor:pointer}
+#menu-btn{display:none}
+main{max-width:60rem;width:100%;margin:auto;padding:1.5rem 1rem 3rem;flex:1}
+h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15;margin:.2em 0 .4em}
+h2{font-size:1.5rem;margin:2rem 0 .8rem}
+.hero{background:var(--surface);border-left:8px solid var(--accent);border-radius:var(--r);padding:1.6rem}
+.btn{display:inline-block;background:var(--primary);color:var(--on-primary);border:2px solid var(--primary);border-radius:99px;padding:.5rem 1.4rem;font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.12)}
+.btn.alt{background:transparent;color:var(--primary)}
+.btn.alt[aria-pressed="true"]{background:var(--primary);color:var(--on-primary)}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.card{background:var(--surface);border-radius:var(--r);padding:1.2rem;border-top:6px solid var(--accent)}
+.card h3{margin:.2rem 0 .5rem}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+.tip{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;align-items:start}
+.tip .tag{background:var(--primary);color:var(--on-primary);border-radius:10px;font-weight:700;text-align:center;padding:.5rem .2rem;font-size:.9rem}
+.tip[hidden]{display:none}
+.quiz{background:var(--surface);border-radius:var(--r);padding:1.4rem}
+fieldset{border:0;padding:0;margin:0}legend{font-size:1.2rem;font-weight:700;margin-bottom:.8rem}
+.opt{display:block;margin:.5rem 0;padding:.7rem 1rem;border-radius:99px;background:var(--bg);cursor:pointer;border:2px solid transparent}
+.opt:has(input:checked){border-color:var(--primary)}
+.opt.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 18%,var(--surface))}
+.opt.bad{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 18%,var(--surface))}
+.progress{height:12px;background:var(--bg);border-radius:99px;overflow:hidden;margin:1rem 0}
+.progress div{height:100%;background:var(--accent);width:0;transition:width .3s}
+.fb{margin:1rem 0;padding:.8rem 1rem;border-radius:10px;background:var(--bg)}
+.fb[hidden],.btn[hidden]{display:none}
+.sim label{display:block;font-weight:600;margin-bottom:.4rem}
+input[type=range]{width:100%;accent-color:var(--primary)}
+.big{font-size:2rem;font-weight:700;color:var(--primary)}
+footer{background:var(--footer);color:var(--text);padding:1.2rem 1rem;text-align:center;font-size:.95rem}
+footer p{margin:.2rem}
+@media(max-width:640px){#menu-btn{display:inline-block}nav{width:100%}nav.closed{display:none}nav ul{flex-direction:column}.tip{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}

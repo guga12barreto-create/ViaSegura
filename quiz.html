@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Teste seus conhecimentos sobre segurança no trânsito.">
+<title>Quiz | ViaSegura</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header><div class="bar">
+<a class="logo" href="index.html">VIASEGURA</a>
+<button class="icon-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="closed" aria-label="Principal"><ul><li><a href="index.html">Início</a></li><li><a href="riscos.html">Fatores de risco</a></li><li><a href="guia.html">Guia de segurança</a></li><li><a href="quiz.html" aria-current="page">Quiz</a></li><li><a href="sobre.html">Sobre o projeto</a></li></ul></nav>
+<button class="icon-btn" id="theme-btn" type="button">Tema escuro</button>
+</div></header>
+<main id="conteudo">
+<h1>Quiz de segurança no trânsito</h1>
+<section class="quiz" id="quiz" aria-live="polite">
+<p id="count"></p>
+<div id="area"></div>
+<div class="fb" id="fb" hidden role="status"></div>
+<button class="btn" id="send" type="button">Enviar resposta</button>
+<button class="btn" id="next" type="button" hidden>Próxima pergunta</button>
+<div class="progress" id="prog-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" aria-label="Progresso do quiz"><div id="prog"></div></div>
+</section>
+</main>
+<footer>
+<p><strong>ViaSegura</strong> – Portal educativo de prevenção de sinistros no trânsito</p>
+<p>ODS 3 · Meta 3.6 · UFFS Campus Chapecó · Ciência da Computação</p>
+<p>Gustavo Ronald Barreto Herculano · 2026</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
